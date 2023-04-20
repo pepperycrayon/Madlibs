@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Web Page</title>
+   <link rel="stylesheet" href="styles.css">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    </head> 
+<body>
+<form id="myForm">
+    <h1>Type in the word form asked for to create a mad libs story</h1>
+    <label for="adjective1"> An adjective:</label>
+    <input type="text" id="adjective1"><br><br>
+    <label for="noun1"> A noun:</label>
+    <input type="text" id="noun1"><br><br>
+    <label for="adjective2"> Another adjective:</label>
+    <input type="text" id="adjective2"><br><br>
+    <label for="noun2">Noun; place:</label>
+    <input type="text" id="noun2"><br><br>
+    <label for="adjective3"> Yet another adjective: </label>
+    <input type="text" id="adjective3"><br><br>
+    <label for="adjective4">Adjective:</label>
+    <input type="text" id="adjective4"><br><br>
+    <label for="adjective5">Adjective:</label>
+    <input type="text" id="adjective5"><br><br>
+    <label for="adjective6">Adjective:</label>
+    <input type="text" id="adjective6"><br><br>
+    <label for="adjective7">Adjective:</label>
+    <input type="text" id="adjective7"><br><br>
+    <label for="adjective8">Adjective:</label>
+    <input type="text" id="adjective8"><br><br>
+    <label for="adjective9">Adjective:</label>
+    <input type="text" id="adjective9"><br><br>
+    <label for="adjective10">Adjective:</label>
+    <input type="text" id="adjective10"><br><br>
+    <label for="adjective11">Adjective:</label>
+    <input type="text" id="adjective11"><br><br>
+    <label for="noun3"> Noun:</label>
+    <input type="text" id="noun3"><br><br>
+    <label for="noun4"> Noun:</label>
+    <input type="text" id="noun4"><br><br>
+    <label for="noun5"> Noun:</label>
+    <input type="text" id="noun5"><br><br>
+    <label for="noun6"> Noun:</label>
+    <input type="text" id="noun6"><br><br>
+    <label for="noun7"> Noun:</label>
+    <input type="text" id="noun7"><br><br>
+    <label for="noun8"> Noun:</label>
+    <input type="text" id="noun8"><br><br>
+    <label for="noun9"> Noun:</label>
+    <input type="text" id="noun9"><br><br>
+    <label for="verb1">A verb</label>
+    <select id="verb1" name="verb1">
+    <option value="think">Think</option>
+    <option value="fall">Fall</option>
+    </select>
+    <br>
+    <br>
+    <label for="verb2">Another verb, randomly choose one of two dots</label>
+    <input type="radio" id="laugh" name="verb2" value="laugh">
+    <label for="laugh">Laugh</label>
+    <input type="radio" id="swim" name="verb2" value="swim">
+    <label for="swim">Swim</label>
+    <br>
+    <br>
+    <label for="verb3">Randomly choose again</label>
+    <input type="checkbox" id="fly" name="verb3" value="fly">
+    <label for="fly">Fly</label>
+    <input type="checkbox" id="run" name="verb3" value="run">
+    <label for="run">Run</label>
+
+<br>
+    <br>
+<br>
+    <input type="submit" value="Submit">
+
+</form>
+<div id="formContent1"></div>
+<script>
+    var form = document.getElementById("myForm");
+    form.addEventListener("submit", function(event){
+        console.log("submitted");
+        event.preventDefault();
+     
+    var adjective1 = document.getElementById("adjective1").value;
+    var noun1 = document.getElementById("noun1").value;
+    var adjective2 = document.getElementById("adjective2").value;
+    var noun2 = document.getElementById("noun2").value;
+    var adjective3 = document.getElementById("adjective3").value;
+    var adjective4 = document.getElementById("adjective4").value;
+    var adjective5 = document.getElementById("adjective5").value;
+    var adjective6 = document.getElementById("adjective6").value;
+    var adjective7 = document.getElementById("adjective7").value;
+    var adjective8 = document.getElementById("adjective8").value;
+    var adjective9 = document.getElementById("adjective9").value;
+    var adjective10 = document.getElementById("adjective10").value;
+    var adjective11 = document.getElementById("adjective11").value;
+    var noun3 = document.getElementById("noun3").value;
+    var noun4 = document.getElementById("noun4").value;
+    var noun5 = document.getElementById("noun5").value;
+    var noun6 = document.getElementById("noun6").value;
+    var noun7 = document.getElementById("noun7").value;
+    var noun8 = document.getElementById("noun8").value;
+    var noun9 = document.getElementById("noun9").value;
+    var verb1 = document.getElementById("verb1").value;
+    //var verb2 = document.getElementById("verb2").value;
+    //var verb3 = document.getElementById("verb3").value;
+   var verb2 = document.querySelector('input[name="verb2"]:checked');
+    var formContent = document.getElementById("formContent1");
+        formContent.innerHTML = "Starwars is a " + adjective1 + " " + noun1 + " of " + adjective2 + " versus evil in a " + noun2 + " far far away.  There are " + adjective3 + " battles between " + adjective4 + " " + noun3 + " in " + adjective5 + " space and " + adjective6 + " duels with " + noun4 + " called " + adjective7 + " sabers.  " + noun5 + " called droids are helpers and " + noun6 + "to the heroes.  A " + adjective8 + " power called The " + noun7 + " " + verb1 + "s people to do " + adjective9 + " things, like " + verb2 + " " + noun8 + ".  The Jedi " + noun9 + " use The Force for the " + adjective10 + " side and the Sith " + verb2 + " it for the " + adjective11 + " side.";
+       
+});
+
+
+</script>
+
+
+    </body>
+</html>
